@@ -1,0 +1,120 @@
+#Cart {
+  @apply text-white fixed p-10;
+  background-color: #1e1e1e;
+  right: 0;
+  z-index: 1600;
+  width: 445px;
+  height: 100vh;
+  display: none;
+}
+#cart_header {
+  @apply flex justify-between;
+}
+#cart_header_text {
+  font-size: 24px;
+}
+#close_cart_btn {
+  @apply rounded-full cursor-pointer flex justify-center items-center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s all;
+}
+#close_cart_btn:hover {
+  background-color: #313131;
+}
+#close_cart_btn:active {
+  transform: translateY(10px);
+}
+#cart_space {
+  @apply w-full bg-white mt-5;
+  height: 1px;
+}
+#cart_total_space {
+  @apply w-full bg-white;
+  height: 1px;
+}
+#cart_total {
+  @apply flex justify-between items-center pt-5;
+}
+#cart_content {
+  @apply pt-10 pb-0;
+}
+.cart_item {
+  @apply flex justify-between items-center pb-10;
+}
+.del_btn {
+  @apply flex justify-center items-center rounded-full;
+  width: 50px;
+  height: 50px;
+  transition: 0.3s all;
+}
+.del_btn:hover {
+  background-color: #313131;
+}
+.del_btn:active {
+  transform: translateY(10px);
+}
+.item_details {
+  @apply flex justify-between items-center gap-6;
+}
+.item_photo_img {
+  @apply rounded-md;
+  width: 84px;
+  height: auto;
+}
+.item_info {
+  font-size: 13px;
+}
+.count_section {
+  @apply flex gap-2 items-center;
+}
+.count_btn {
+  @apply flex justify-center items-center rounded-full;
+  width: 24px;
+  height: 24px;
+  transition: 0.3s all;
+}
+.count_btn:hover {
+  background-color: #313131;
+}
+.count_btn:active {
+  transform: translateY(10px);
+}
+
+.cart-show {
+  display: block;
+  opacity: 1;
+  animation: cart-show 0.2s;
+}
+.cart-hidden {
+  animation: cart-hide 0.2s;
+  opacity: 0;
+}
+
+@keyframes cart-show {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes cart-hide {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+@media (max-width: 424px) {
+  #Cart {
+    width: 345px;
+    height: 110vh;
+  }
+}
